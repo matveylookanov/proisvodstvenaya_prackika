@@ -21,12 +21,13 @@ function loadMetrics() {
         const div = document.createElement("div");
         div.className = "metric-item";
         const dt = m.run_datetime || m.created_at;
+        const strategyText = m.strategy === "mobile" ? "Мобильная" : "Десктоп";
         div.innerHTML = `
           <span><strong>${m.url}</strong></span>
-          <span>${m.strategy}</span>
-          <span>Perf: ${m.score_performance ?? "-"}</span>
-          <span>LCP: ${m.lcp_ms ?? "-"}</span>
-          <span>CLS: ${m.cls ?? "-"}</span>
+          <span>${strategyText}</span>
+          <span>Производительность: ${m.score_performance ?? "-"}</span>
+          <span>Отрисовка крупнейшего элемента: ${m.lcp_ms ?? "-"} мс</span>
+          <span>Смещение макета: ${m.cls ?? "-"}</span>
           <span>${new Date(dt).toLocaleString()}</span>
         `;
         metricsItems.appendChild(div);

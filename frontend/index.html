@@ -9,12 +9,6 @@
 <body>
   <div class="container">
     <h1>Фиксация показателей PageSpeed Insights</h1>
-    <p class="description">
-      Форма для ручного занесения результатов анализа с сервиса
-      <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">PageSpeed Insights</a>.
-      Сначала запусти анализ сайта, затем перенеси ключевые показатели.
-    </p>
-
     <form id="metrics-form">
       <h2>Общие данные</h2>
       <div class="row">
@@ -41,19 +35,19 @@
         </div>
       </div>
 
-      <h2>Итоговые оценки Lighthouse (0–100)</h2>
+      <h2>Итоговые оценки   (0–100)</h2>
       <p class="section-help">Основные оценки находятся в верхней части отчёта.</p>
       <div class="row">
         <div class="field">
-          <label for="score_performance">Performance (Производительность)</label>
+          <label for="score_performance">Производительность</label>
           <input type="number" id="score_performance" name="score_performance" min="0" max="100" />
         </div>
         <div class="field">
-          <label for="score_accessibility">Accessibility (Доступность)</label>
+          <label for="score_accessibility">Доступность</label>
           <input type="number" id="score_accessibility" name="score_accessibility" min="0" max="100" />
         </div>
         <div class="field">
-          <label for="score_best_practices">Best Practices</label>
+          <label for="score_best_practices">Рекомендации</label>
           <input type="number" id="score_best_practices" name="score_best_practices" min="0" max="100" />
         </div>
         <div class="field">
@@ -62,38 +56,35 @@
         </div>
       </div>
 
-      <h2>Core Web Vitals и ключевые метрики</h2>
-      <p class="section-help">
-        Эти показатели находятся в блоках Core Web Vitals и в разделе метрик производительности.
-      </p>
+      <h2>Основные веб-показатели и ключевые метрики</h2>
       <div class="row">
         <div class="field">
-          <label for="fcp_ms">FCP — First Contentful Paint (мс)</label>
-          <input type="number" id="fcp_ms" name="fcp_ms" min="0" />
+          <label for="fcp_ms">Первая отрисовка содержимого (мс)</label>
+          <input type="number" step="0.01" id="fcp_ms" name="fcp_ms" min="0" />
         </div>
         <div class="field">
-          <label for="lcp_ms">LCP — Largest Contentful Paint (мс)</label>
-          <input type="number" id="lcp_ms" name="lcp_ms" min="0" />
+          <label for="lcp_ms">Отрисовка крупнейшего элемента содержимого (мс)</label>
+          <input type="number" step="0.01" id="lcp_ms" name="lcp_ms" min="0" />
         </div>
         <div class="field">
-          <label for="inp_ms">INP — Interaction to Next Paint (мс)</label>
-          <input type="number" id="inp_ms" name="inp_ms" min="0" />
+          <label for="inp_ms">Взаимодействие до следующей отрисовки (мс)</label>
+          <input type="number" step="0.01" id="inp_ms" name="inp_ms" min="0" />
         </div>
         <div class="field">
-          <label for="ttfb_ms">TTFB — Time to First Byte (мс)</label>
-          <input type="number" id="ttfb_ms" name="ttfb_ms" min="0" />
+          <label for="ttfb_ms">Время до первого байта (мс)</label>
+          <input type="number" step="0.01" id="ttfb_ms" name="ttfb_ms" min="0" />
         </div>
         <div class="field">
-          <label for="cls">CLS — Cumulative Layout Shift</label>
+          <label for="cls">Совокупное смещение макета</label>
           <input type="number" step="0.001" id="cls" name="cls" min="0" />
         </div>
         <div class="field">
-          <label for="speed_index_ms">Speed Index (мс)</label>
-          <input type="number" id="speed_index_ms" name="speed_index_ms" min="0" />
+          <label for="speed_index_ms">Индекс скорости (мс)</label>
+          <input type="number" step="0.01" id="speed_index_ms" name="speed_index_ms" min="0" />
         </div>
         <div class="field">
-          <label for="tbt_ms">TBT — Total Blocking Time (мс)</label>
-          <input type="number" id="tbt_ms" name="tbt_ms" min="0" />
+          <label for="tbt_ms">Общее время блокировки (мс)</label>
+          <input type="number" step="0.01" id="tbt_ms" name="tbt_ms" min="0" />
         </div>
       </div>
 
